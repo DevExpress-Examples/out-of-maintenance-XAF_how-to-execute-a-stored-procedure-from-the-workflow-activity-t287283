@@ -1,0 +1,103 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ExecuteSprocWorkflowExample.Module.Activity1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ExecuteSprocWorkflowExample.Module.Activity1_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:de="clr-namespace:DevExpress.ExpressApp;assembly=DevExpress.ExpressApp.v15.1"
+ xmlns:dex="clr-namespace:DevExpress.ExpressApp.Xpo;assembly=DevExpress.ExpressApp.Xpo.v15.1"
+ xmlns:dwa="clr-namespace:DevExpress.Workflow.Activities;assembly=DevExpress.Workflow.Activities.v15.1"
+ xmlns:dx="clr-namespace:DevExpress.Xpo;assembly=DevExpress.Xpo.v15.1"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>DevExpress.ExpressApp.Xpo</x:String>
+      <x:String>DevExpress.ExpressApp</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>DevExpress.ExpressApp.Xpo.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Printing.v15.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.Data.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.ExpressApp.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Persistent.Base.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Persistent.BaseImpl.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Xpo.v15.1</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>DevExpress.ExpressApp.ConditionalAppearance.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.ExpressApp.Workflow.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.ExpressApp.Security.v15.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Workflow.Activities.v15.1</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>DevExpress.Utils.v15.1</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Web</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>ExecuteSprocWorkflowExample.Module</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <dwa:ObjectSpaceTransactionScope AutoCommit="True" sap2010:WorkflowViewState.IdRef="ObjectSpaceTransactionScope_1">
+    <dwa:ObjectSpaceTransactionScope.Variables>
+      <Variable x:TypeArguments="de:IObjectSpace" Name="objectSpace" />
+      <Variable x:TypeArguments="dex:XPObjectSpace" Name="xpObjectSpace" />
+    </dwa:ObjectSpaceTransactionScope.Variables>
+    <dwa:TransactionalGetObjectSpace sap2010:WorkflowViewState.IdRef="TransactionalGetObjectSpace_1">
+      <dwa:TransactionalGetObjectSpace.Result>
+        <OutArgument x:TypeArguments="de:IObjectSpace">
+          <mca:CSharpReference x:TypeArguments="de:IObjectSpace">objectSpace</mca:CSharpReference>
+        </OutArgument>
+      </dwa:TransactionalGetObjectSpace.Result>
+    </dwa:TransactionalGetObjectSpace>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="dex:XPObjectSpace">
+          <mca:CSharpReference x:TypeArguments="dex:XPObjectSpace">xpObjectSpace</mca:CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="dex:XPObjectSpace">
+          <mca:CSharpValue x:TypeArguments="dex:XPObjectSpace">(XPObjectSpace)objectSpace</mca:CSharpValue>
+        </InArgument>
+      </Assign.Value>
+      <sap2010:WorkflowViewState.IdRef>Assign_1</sap2010:WorkflowViewState.IdRef>
+    </Assign>
+    <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="ExecuteSproc">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="dx:Session">
+          <mca:CSharpValue x:TypeArguments="dx:Session">xpObjectSpace.Session</mca:CSharpValue>
+        </InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:String">procName</InArgument>
+    </InvokeMethod>
+    <sads:DebugSymbol.Symbol>dzdjOlxQcm9qZWN0c1xTb2x1dGlvbjI0XFNvbHV0aW9uMjQuTW9kdWxlXEFjdGl2aXR5MS54YW1sCjsDXSUCAQE7Lzs1AgECQAVGJwIBD0cFUw4CAQhUBVsUAgEDQwtDYwIBEE8LT2wCAQxKC0pnAgEJWi5aNgIBB1cLV2ACAQQ=</sads:DebugSymbol.Symbol>
+  </dwa:ObjectSpaceTransactionScope>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="TransactionalGetObjectSpace_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="242,130" />
+      <sap2010:ViewStateData Id="ObjectSpaceTransactionScope_1" sap:VirtualizedContainerService.HintSize="268,362" />
+      <sap2010:ViewStateData Id="ExecuteSprocWorkflowExample.Module.Activity1_1" sap:VirtualizedContainerService.HintSize="308,442" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
