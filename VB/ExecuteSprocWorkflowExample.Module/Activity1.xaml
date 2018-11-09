@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ExecuteSprocWorkflowExample.Module.Activity1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ExecuteSprocWorkflowExample.Module.Activity1_1"
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="ExecuteSprocWorkflowExample.Module.Activity1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ExecuteSprocWorkflowExample.Module.Activity1_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:de="clr-namespace:DevExpress.ExpressApp;assembly=DevExpress.ExpressApp.v15.1"
  xmlns:dex="clr-namespace:DevExpress.ExpressApp.Xpo;assembly=DevExpress.ExpressApp.Xpo.v15.1"
