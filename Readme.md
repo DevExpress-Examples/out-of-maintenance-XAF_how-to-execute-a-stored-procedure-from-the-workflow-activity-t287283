@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[CustomNativeActivity.cs](./CS/ExecuteSprocWorkflowExample.Module/CustomNativeActivity.cs) (VB: [CustomNativeActivity2.vb](./VB/ExecuteSprocWorkflowExample.Module/CustomNativeActivity2.vb))**
+* [CustomNativeActivity2.cs](./CS/ExecuteSprocWorkflowExample.Module/CustomNativeActivity2.cs) (VB: [CustomNativeActivity2.vb](./VB/ExecuteSprocWorkflowExample.Module/CustomNativeActivity2.vb))
+* [WinApplication.cs](./CS/ExecuteSprocWorkflowExample.Win/WinApplication.cs) (VB: [WinApplication.vb](./VB/ExecuteSprocWorkflowExample.Win/WinApplication.vb))
+<!-- default file list end -->
 # How to: Execute a Stored Procedure from the Workflow Activity
 
 
